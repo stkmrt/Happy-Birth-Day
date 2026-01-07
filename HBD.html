@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday - Jan 7th</title>
+    <link rel="stylesheet" href="Hbd.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="page1" class="page active">
+            <div class="card">
+                <span class="emoji">💌</span>
+                <h1>มีข้อความถึงคุณ...</h1>
+                <p>กดปุ่มด้านล่างเพื่อเปิดอ่านนะ</p>
+                <button onclick="nextPage(2)">เปิดข้อความ</button>
+            </div>
+        </div>
+
+        <div id="page2" class="page">
+            <div class="card">
+                <h1>Happy Birthday! 🎉</h1>
+                <h2>สุขสันต์วันเกิดนะคะ!</h2>
+                <div class="button-group">
+                    <button class="btn-no" id="noBtn" onmouseover="moveButton()">ไม่รับพร</button>
+                    <button class="btn-yes" onclick="nextPage(3)">รับพร</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3" class="page">
+            <div class="card final-card">
+                <img src="https://www.lemon8-app.com/seo/image?item_id=7441612272956473873&index=0&sign=83ef52ce301684d9bf404b073c2ab2c8" alt="Birthday Cake" class="cake-img">
+                <p>ขอให้ปีนี้เป็นปีที่ดี มีความสุขมากๆ <br> สมหวังทุกอย่างที่ตั้งใจนะ 😊 <br> สุดท้ายนี้รักนะ แบร่😜</p>
+                <p class="date-text">07.01.2026</p>
+                <button onclick="location.reload()">ย้อนกลับไปอ่านอีกครั้ง</button>
+            </div>
+        </div>
+    </div>
+    <script src="HBd.js"></script>
+</body>
+</html>
