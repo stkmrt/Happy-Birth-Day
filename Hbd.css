@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mali', cursive; /* ใช้ฟอนต์น่ารักๆ */
+    background: linear-gradient(135deg, #FFC0CB, #E0BBE4, #957DAD, #D291BC, #84CEEB); /* พาสเทลชมพู ม่วง ฟ้า */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; /* สีตัวอักษรเข้มขึ้นเพื่อให้ตัดกับพื้นหลังพาสเทล */
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 450px; /* ขยายขนาดการ์ดเล็กน้อย */
+}
+
+.page {
+    display: none;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+    animation: fadeInScale 0.8s ease forwards; /* เพิ่มลูกเล่น scale */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7); /* พื้นหลังการ์ดโปร่งแสง */
+    padding: 40px;
+    border-radius: 25px; /* โค้งมนมากขึ้น */
+    backdrop-filter: blur(15px); /* เบลอมากขึ้น */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    position: relative; /* สำหรับตำแหน่งปุ่ม No */
+}
+
+h1 { font-size: 28px; color: #84CEEB; /* สีฟ้าพาสเทล */ margin-bottom: 15px; }
+h2 { font-size: 24px; color: #D291BC; /* สีชมพูพาสเทล */ margin-bottom: 10px; }
+p { font-size: 17px; color: #6C5B7B; /* สีม่วงเข้ม */ line-height: 1.8; margin-bottom: 25px; }
+.emoji { font-size: 60px; display: block; margin-bottom: 20px; animation: bounce 1.5s infinite; /* อีโมจิเด้ง */ }
+
+button {
+    background: #FFC0CB; /* ชมพูอ่อน */
+    color: #6C5B7B; /* ม่วงเข้ม */
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px; /* โค้งมนเป็นวงรี */
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: #D291BC; /* ชมพูเข้มขึ้น */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-no {
+    background: #E0BBE4; /* ม่วงอ่อน */
+    color: #6C5B7B;
+    position: absolute; /* สำหรับปุ่มหนี */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.btn-yes {
+    background: #84CEEB; /* ฟ้าอ่อน */
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 20px; /* เพิ่มพื้นที่ด้านบนสำหรับปุ่ม No */
+}
+
+/* รูปเค้กในหน้าสุดท้าย */
+.cake-img {
+    width: 150px; /* ขนาดรูปเค้ก */
+    height: auto;
+    margin-bottom: 25px;
+    animation: pulse 1.5s infinite alternate; /* เค้กเต้นเบาๆ */
+}
+
+.final-card h1 {
+    color: #FFC0CB; /* ชมพูสำหรับหัวข้อสุดท้าย */
+}
+
+.date-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #D291BC;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: translateY(30px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
